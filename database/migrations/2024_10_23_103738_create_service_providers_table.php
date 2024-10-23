@@ -13,15 +13,15 @@ return new class extends Migration
     {
         Schema::create('service_providers', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('short_description');
-            $table->string('category');
-            $table->string('requirement');
-            $table->json('packages'); 
-            $table->decimal('rating', 2, 1)->default(0); 
-            $table->string('email');
-            $table->string('whatsapp_number');
-            $table->timestamps();
+        $table->string('name');
+        $table->string('short_description');
+        $table->string('category');
+        $table->string('requirement');
+        $table->json('packages'); // JSON untuk menyimpan package list
+        $table->decimal('rating', 2, 1)->default(0.0);
+        $table->string('email')->unique();
+        $table->string('whatsapp_number');
+        $table->timestamps();
         });
     }
 
