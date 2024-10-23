@@ -7,10 +7,8 @@
     <title>Document</title>
     @vite('resources/css/app.css')
 </head>
-<body class="h-full">
-<div class="min-h-full">
+<body>
     <x-header></x-header>
     <x-footer></x-footer>
-</div> 
 </body>
 </html>
